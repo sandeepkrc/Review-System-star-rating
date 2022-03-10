@@ -11,6 +11,6 @@ urlpatterns = [
     path('starpost',StarSurveyView.as_view()),
     path('rating',RatingView.as_view()),#submit learner
     path('ratingget',RatinggetView.as_view()),#all response of a question
-    # path("abc",Abc.as_view()),
+
     
 ]
