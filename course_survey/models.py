@@ -4,14 +4,13 @@ from course.models import Course
 
 #options based survey
 class Survey(models.Model):
-    #QUESTION ID BY DEFAULT CREATED
     oraganization_id = models.CharField(max_length=200)
     course = models.ForeignKey(Course,on_delete=models.CASCADE)#map with course table
     question = models.CharField(max_length=200)
     option = models.JSONField()# jason field for storing array
   
     
- #options based survey feedback   
+ #options based survey feedback   submit response
 class Feedback(models.Model): 
     question = models.ForeignKey(Survey,on_delete=models.CASCADE)#map with q table   
     feedback = models.CharField(max_length=200,null=True)# jason field for storing array
